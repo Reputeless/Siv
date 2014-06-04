@@ -34,10 +34,10 @@ int main()
 
 	for (int i = 0; i < 5; ++i)
 	{
-		siv::RDTSCClock hz;
+		siv::RDTSCClock cycles;
 
 		::Sleep(100);
 
-		std::cout << hz.elapsed << "Hz\n";
+		std::cout << cycles.elapsed << "cycles\n";
 	}
 }
