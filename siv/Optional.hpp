@@ -345,7 +345,7 @@ namespace siv
 
 		SIV_CONSTEXPR reference_const_type value() const
 		{
-			if (!static_cast<bool>(*this))
+			if (!m_initialized)
 			{
 				throw bad_optional_access("bad access");
 			}
@@ -355,7 +355,7 @@ namespace siv
 
 		reference_type value()
 		{
-			if (!static_cast<bool>(*this))
+			if (!m_initialized)
 			{
 				throw bad_optional_access("bad access");
 			}
@@ -452,7 +452,7 @@ namespace siv
 			return false;
 		}
 		
-		if (!static_cast<bool>(x))
+		if (!x)
 		{
 			return true;
 		}
