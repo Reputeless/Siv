@@ -166,7 +166,7 @@ namespace siv
 		{
 			SIV_REQUIRES(is_copy_constructible<value_type>);
 
-			if (static_cast<bool>(another))
+			if (another)
 			{
 				construct(another.value());
 			}
@@ -176,7 +176,7 @@ namespace siv
 		{
 			SIV_REQUIRES(is_move_constructible<value_type>);
 
-			if (static_cast<bool>(another))
+			if (another)
 			{
 				emplace(std::move(another.value()));
 			}
@@ -426,7 +426,7 @@ namespace siv
 			m_initialized = false;
 		}
 
-			pointer_const_type get_ptr() const
+		pointer_const_type get_ptr() const
 		{
 			assert(static_cast<bool>(*this));
 
@@ -681,7 +681,7 @@ namespace std
 	{
 		std::size_t operator() (const siv::optional<T>& arg) const
 		{
-			if (static_cast<bool>(arg))
+			if (arg)
 			{
 				return std::hash<T>{}(*arg);
 			}
