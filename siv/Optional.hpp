@@ -128,7 +128,7 @@ namespace siv
 	};
 
 	//
-	// optional for object types
+	//	optional for object types
 	//
 	template<typename T>
 	class optional
