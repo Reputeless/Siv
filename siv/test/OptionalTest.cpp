@@ -184,7 +184,7 @@ void Test4()
 	assert(ok == 300);
 }
 
-// hasing
+// hashing
 void Test5()
 {
 	std::hash<int> hi;
