@@ -5,6 +5,7 @@
 //	Distributed under the MIT license.
 //------------------------------------------
 
+# pragma once
 # pragma comment(lib, "IPHLPAPI")
 # include <filesystem>
 # include <sstream>
