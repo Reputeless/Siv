@@ -243,9 +243,9 @@ namespace siv
 			SIV_REQUIRES(is_copy_constructible<value_type>);
 			SIV_REQUIRES(is_copy_assignable<value_type>);
 
-			if		(m_initialized == true  && rhs.m_initialized == false) destroy();
-			else if (m_initialized == false && rhs.m_initialized == true) construct(*rhs);
-			else if (m_initialized == true  && rhs.m_initialized == true) m_value = *rhs;
+			if		(m_initialized == true  && another.m_initialized == false) destroy();
+			else if (m_initialized == false && another.m_initialized == true) construct(*another);
+			else if (m_initialized == true  && another.m_initialized == true) m_value = *another;
 			return *this;
 		}
 
