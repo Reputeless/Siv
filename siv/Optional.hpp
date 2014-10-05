@@ -245,7 +245,7 @@ namespace siv
 
 			if		(m_initialized == true  && another.m_initialized == false) destroy();
 			else if (m_initialized == false && another.m_initialized == true) construct(*another);
-			else if (m_initialized == true  && another.m_initialized == true) m_value = *another;
+			else if (m_initialized == true  && another.m_initialized == true) m_value = another.m_value;
 			return *this;
 		}
 
